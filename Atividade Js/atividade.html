@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atividades JS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #4A90E2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #4A90E2;
+    }
+
+    button {
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin: 10px 5px;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 600px) {
+      button {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Atividades JavaScript</h1>
+    <p>Interativas, modernas e simples</p>
+  </header>
+
+  <main>
+    <!-- Atividade 1 -->
+    <section>
+      <h2>1. Atividade das Mensagens</h2>
+      <p>Clique em um dos botões abaixo para ver uma mensagem:</p>
+      <button onclick="mensagem(1)">Botão 1</button>
+      <button onclick="mensagem(2)">Botão 2</button>
+      <button onclick="mensagem(3)">Botão 3</button>
+    </section>
+
+    <!-- Atividade 2 -->
+    <section>
+      <h2>2. Boas-Vindas</h2>
+      <p>Clique no botão e informe seu nome e idade:</p>
+      <button onclick="boasVindas()">Diga Olá</button>
+    </section>
+
+    <!-- Atividade 3 -->
+    <section>
+      <h2>3. Antes e Depois</h2>
+      <p>Digite um número inteiro para ver seu antecessor e sucessor:</p>
+      <button onclick="antesDepois()">Descobrir</button>
+    </section>
+
+    <!-- Atividade 4 -->
+    <section>
+      <h2>4. Calculadora de Troco</h2>
+      <p>Simule uma compra e veja quanto será seu troco:</p>
+      <button onclick="calcularTroco()">Calcular Troco</button>
+    </section>
+  </main>
+
+  <script>
+    // Atividade 1
+    function mensagem(num) {
+      alert(`Você clicou no ${num}º botão!`);
+    }
+
+    // Atividade 2
+    function boasVindas() {
+      const nome = prompt("Qual é o seu nome?");
+      if (nome) {
+        const idade = prompt(`Olá, ${nome}! Quantos anos você tem?`);
+        if (idade) {
+          alert(`Que maravilha! ${nome} tem ${idade} anos!`);
+        }
+      }
+    }
+
+    // Atividade 3
+    function antesDepois() {
+      const numero = parseInt(prompt("Digite um número inteiro:"));
+      if (!isNaN(numero)) {
+        alert(`Antes de ${numero} temos ${numero - 1}, e depois temos ${numero + 1}.`);
+      } else {
+        alert("Por favor, digite um número válido.");
+      }
+    }
+
+    // Atividade 4
+    function calcularTroco() {
+      const produto = prompt("Qual o nome do produto?");
+      const preco = parseFloat(prompt(`Qual o preço do(a) ${produto}?`).replace(",", "."));
+      const pago = parseFloat(prompt(`Quanto em dinheiro foi entregue para pagar o(a) ${produto}?`).replace(",", "."));
+
+      if (produto && !isNaN(preco) && !isNaN(pago)) {
+        const troco = (pago - preco).toFixed(2);
+        alert(`Você comprou ${produto}, que custa R$${preco.toFixed(2)}. Deu R$${pago.toFixed(2)} em dinheiro e vai receber R$${troco} de troco! Volte sempre!`);
+      } else {
+        alert("Informações inválidas. Tente novamente.");
+      }
+    }
+  </script>
+, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
